@@ -353,23 +353,22 @@ header
      box-shadow: 3px 0 13px rgba(30, 30, 30, 0.90);
 }
 
-  /* Custom Hamburger Icon */
-   .custom-toggler .navbar-toggler-icon {
+ .custom-toggler .navbar-toggler-icon {
       display: inline-block;
       width: 30px;
-      height: 22px;
+      height: 24px;
       position: relative;
    }
    .custom-toggler .navbar-toggler-icon::before,
    .custom-toggler .navbar-toggler-icon::after,
-   .custom-toggler .navbar-toggler-icon div {
+   .custom-toggler .navbar-toggler-icon .middle-line {
       content: '';
       display: block;
-      background-color: #333;
+      background-color: #FFF;
       height: 3px;
       width: 100%;
       position: absolute;
-      transition: all 0.3s;
+      transition: all 0.3s ease;
    }
    .custom-toggler .navbar-toggler-icon::before {
       top: 0;
@@ -377,10 +376,10 @@ header
    .custom-toggler .navbar-toggler-icon::after {
       bottom: 0;
    }
-   .custom-toggler .navbar-toggler-icon div {
-      top: 9px;
+   .custom-toggler .navbar-toggler-icon .middle-line {
+      top: 50%;
+      transform: translateY(-50%);
    }
-
 /*---------------------------------------------------------------------
 menu section
 ---------------------------------------------------------------------*/
