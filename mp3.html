@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive MP3 Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f4f6;
+        }
+        .player {
+            text-align: center;
+            padding: 20px;
+            width: 400px; /* Adjust the width here to make it wider */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .player:hover {
+            transform: scale(1.05);
+        }
+        .track-name {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        .play-pause-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .play-pause-button:hover {
+            background-color: #45a049;
+        }
+        .instructions {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="player" onclick="togglePlayPause()">
+        <div class="track-name">Track Name: Awesome Song</div>
+        <button id="playPauseBtn" class="play-pause-button">Click to Play</button>
+        <audio id="audioPlayer" src="C:\Users\Kimalessandra\PycharmProjects\pythonProject\hightech-html\images\butt kicks.mp3"></audio>
+        <div class="instructions">Click on the button to play or pause the track.</div>
+    </div>
+
+    <script>
+        const audioPlayer = document.getElementById("audioPlayer");
+        const playPauseBtn = document.getElementById("playPauseBtn");
+
+        function togglePlayPause() {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playPauseBtn.textContent = "Pause";
+            } else {
+                audioPlayer.pause();
+                playPauseBtn.textContent = "Play";
+            }
+        }
+    </script>
+</body>
+</html>
