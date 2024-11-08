@@ -617,7 +617,7 @@ ul.email li i {
 .player {
     text-align: center;
     padding: 20px;
-    width: 400px; /* Adjust the width here to make it wider */
+    width: 350px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f3f4f6; /* Light background for contrast */
